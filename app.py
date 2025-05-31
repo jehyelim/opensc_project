@@ -2,6 +2,7 @@ import streamlit as st
 import cv2
 import tempfile
 from datetime import datetime
+from detector import detect_objects
 
 st.title("어린이 보호구역 위험 감지 시스템")
 
@@ -20,8 +21,10 @@ if video_file:
         if not ret or frame_count>10:
             break
 
-        if frame_count==5:
-            st.error("⚠ 보호구역 내 위험 요소 감지 ⚠", icon="🚨")
+        for det in detections:
+            if det["class-id"]==2:
+                st.error("⚠ 보호구역 내 차량 감지됨! 위험합니다 ⚠", icon="🚨")
+                break
         frame_count+=1
 
     cap.release()
