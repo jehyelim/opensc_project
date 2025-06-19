@@ -1,13 +1,15 @@
 # 오픈소스프로그래밍 기말 프로젝트
 
-## 기술 개발 목표
-  어린이 보호 구역 내 영상 데이터를 활용하여, 도로상에서의 어린이 객체 탐지 후 위험 행동 탐지 시 보호자에게 경고 알림을 제공하는 시스템 개발
+## Introduction
+  It is a system that automatically detects and warns children's dangerous behavior that may occur on the road in a child protection zone to    reduce traffic accidents among children.
+  The main function is to detect a child's dangerous behavior (jay walk, suddenly appear, and fall down) in real time, float a warning          message notification with a warning sound, and send an email to the guardian.
 
-## 사용 데이터셋
+## 
+## usage dataset
   어린이 보호구역 내 어린이 도로보행 위험 행동 영상 데이터
   - Fall_down, jay_walk(무단 횡단), suddenlyappear
 
-## 기대효과
+## expected effect
 - 기술적 기대효과
   - 실시간 객체 탐지 및 행동 인식 기술 확보
   - 구현한 시스템에 멀티 클래스 위험 판단 로직 등의 기술을 도입하여 다양한 객체 유형에 따른 위험 상황 복합 판단하는 모델로 확장 가능
