@@ -9,11 +9,6 @@ import numpy as np
 
 
 
-
-CLASS_NAMES=['cycle', 'face', 'license plate', 'person', 'traffic light', 'vehicle']
-PERSON_CLASS_ID=CLASS_NAMES.index('person')
-TRAFFIC_LIGHT_ID=CLASS_NAMES.index('traffic light')
-
 #도로 영역 정의
 
 def detect_jaywalking(video_path, model_path):
@@ -23,6 +18,11 @@ def detect_jaywalking(video_path, model_path):
 
     model=YOLO(model_path)
     model.conf=0.4
+
+    CLASS_NAMES=['cycle', 'face', 'license plate', 'person', 'traffic light', 'vehicle']
+    PERSON_CLASS_ID=CLASS_NAMES.index('person')
+    TRAFFIC_LIGHT_ID=CLASS_NAMES.index('traffic light')
+
 
     road_polygon=np.array([[int(width * 0.1), int(height * 0.2)],   # 왼쪽 위
         [int(width * 0.9), int(height * 0.2)],   # 오른쪽 위
@@ -50,10 +50,10 @@ def detect_jaywalking(video_path, model_path):
         out=cv2.resizeWindow("Result", 960, 540)
 
         while cap.isOpened():
-            a
+            
             ret, frame=cap.read()
             if not ret:
-                a
+                
                 break
             results=model(frame)
     
@@ -63,7 +63,7 @@ def detect_jaywalking(video_path, model_path):
     #confidences=detections.boxes.conf.cpu().numpy()
 
             green_light=False
-            #green_detected=False
+            green_detected=False
 
     #red_light_on=False
             for i, cls in enumerate(classes):
@@ -75,27 +75,28 @@ def detect_jaywalking(video_path, model_path):
                     box=boxes[i]
                     if is_green_light(frame, box):
                         
+                        
                         green_light=True
                         break
 
             for i, cls in enumerate(classes):
-                a
+                
         
                 if cls==PERSON_CLASS_ID:
-                    a
+                    
                     box=boxes[i] 
                     x1, y1, x2, y2=map(int, box)
                     cx=(x1+x2)//2
                     cy=(y1+y2)//2
                     if cv2.pointPolygonTest(road_polygon,( cx, cy), False)>=0:
-                        a
+                        
                         if not green_light:
-                            a
+                            
                             cv2.putText(frame, "WARNING!! Jay Walking!!!", (x1, y1 - 10),
                                 cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 0, 255), 3)
                             cv2.rectangle(frame, (x1, y1), (x2, y2),(0, 0, 255), 3 )
                     else:
-                        a
+                        
                         cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
 
             cv2.polylines(frame, [road_polygon], isClosed=True, color=(0, 255, 255), thickness=2)
