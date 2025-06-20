@@ -23,7 +23,9 @@ def detect_fall(video_path, model_path):
 
     fall_status = {}
     fall_display_counter = 0
-    fall_position = None 
+    fall_position = None
+
+    detected=False
 
     while cap.isOpened():
         ret, frame = cap.read()
@@ -51,6 +53,7 @@ def detect_fall(video_path, model_path):
                         fall_status[key] = 1
 
                     if fall_status[key] >= 3:
+                        detected=True
                         fall_display_counter = 30
                         if fall_position is None:
                             fall_position = (x1, max(50, y1 - 10))
@@ -70,5 +73,5 @@ def detect_fall(video_path, model_path):
     cap.release()
     out.release()
     cv2.destroyAllWindows()
-    return output_path
+    return detected
 
