@@ -9,7 +9,6 @@
   어린이 보호구역 내 어린이 도로보행 위험 행동 영상 데이터(https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=169)
   - Fall_down, jay_walk, suddenlyappear
 
-# 연구 개발 내용
 
 ## installation
 #### 1. Clone the repository:
@@ -21,7 +20,7 @@
 ```
 pip install -r requirements.txt
 ```  
-#### 3. Run the main
+#### 3. Run the main:
 ``` 
 python main.py
 ```
