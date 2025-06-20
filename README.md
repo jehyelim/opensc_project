@@ -6,17 +6,8 @@
 
 ## 
 ## usage dataset
-  어린이 보호구역 내 어린이 도로보행 위험 행동 영상 데이터
-  - Fall_down, jay_walk(무단 횡단), suddenlyappear
-
-## expected effect
-- 기술적 기대효과
-  - 실시간 객체 탐지 및 행동 인식 기술 확보
-  - 구현한 시스템에 멀티 클래스 위험 판단 로직 등의 기술을 도입하여 다양한 객체 유형에 따른 위험 상황 복합 판단하는 모델로 확장 가능
-  - 이를 기반으로 다양한 도메인에 적용 가능한 실시간 위험 감지 플랫폼으로의 확장 가능성
-- 사회적 기대효과
-  - 보호자가 실시간으로 아이의 위험 상황을 파악하여, 보호 공백의 위험을 해소하는 효과
-  - 교통 안전 강화 및 타지역이나 타대상으로 확장이 용이해 더 정교한 교통 안전 대책으로 발전 가능
+  어린이 보호구역 내 어린이 도로보행 위험 행동 영상 데이터(https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=169)
+  - Fall_down, jay_walk, suddenlyappear
 
 # 연구 개발 내용
 
