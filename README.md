@@ -2,7 +2,7 @@
 
 ## Introduction
   It is a system that automatically detects and warns children's dangerous behavior that may occur on the road in a child protection zone to    reduce traffic accidents among children.
-  The main function is to detect a child's dangerous behavior (jay walk, suddenly appear, and fall down) in real time, float a warning          message notification with a warning sound, and send an email to the guardian.
+  The main function is to detect a child's dangerous behavior (jay walk, suddenly appear, and fall down) in real time, float a warning          message notification with a warning sound.
 
 ## 
 ## usage dataset
