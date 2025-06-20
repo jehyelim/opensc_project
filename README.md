@@ -5,9 +5,11 @@
   The main function is to detect a child's dangerous behavior (jay walk, suddenly appear, and fall down) in real time, float a warning          message notification with a warning sound. Images of detecting each dangerous behavior are also stored to check which behavior is detected.
 
 ## 
+
 ## usage dataset
   어린이 보호구역 내 어린이 도로보행 위험 행동 영상 데이터(https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=169)
   - Fall_down, jay_walk, suddenlyappear
+
 
 
 ## Features
@@ -19,6 +21,7 @@
 - Displays on-screen warning messages
 - Plays waring sounds('alert.mp3')
 - Saves detection results as a vidio ('output/result.mp4')
+
   
 
 ## Project Structure
@@ -33,6 +36,8 @@ opensc_project/
     README.md
 ```
 
+
+
 ## Example output
 Below is an example of the system detecting a dangerous behavior in a child protection zone.
 ![Detection](output/jay_walk.png)
@@ -42,14 +47,16 @@ When dangerous behavior is detected:
 - A red bounding box appears on the person
 - A warning message is displayed
 
+
   
 ## Troubleshooting
 If you encounter any issues:
 
-- **Model file not found**: Make sure the all '~.pt' file is placed in the 'models/' directory.
+- **Model file not found**: Make sure the all '.pt' files are placed in the 'models/' directory.
 - **No vidio output**: Check if your webcam of video path is correctly set in 'main.py'.
 - **Dependency errors**: Run 'pip install -r requirments.txt' to install all required packages.
   
+
 
 ## Installation
 #### 1. Clone the repository:
