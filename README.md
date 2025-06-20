@@ -23,19 +23,26 @@
 
 ## Project Structure
 opensc_project/
+
     logics/ # Core detection logic (e.g., fall_down.py)
+    
     models/ # YOLO trained model files (e.g., fall_down.pt)
+    
     output/ # Output derectory for result videos
+    
     alert.mp3 # Warning sound file
+    
     main.py # Main entry point (Streanlit app)
+    
     requirements.txt # Python dependencies
+    
     README.md
 
 
 ## Example output
 Below is an example of the system detecting a dangerous behavior in a child protection zone.
-![Detection]
-![Detection]
+![Detection](output/jay_walk.png)
+![Detection](output/fall_down.png)
 When dangerous behavior is detected:
 - A red bounding box appears on the person
 - A warning message is displayed
