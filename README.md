@@ -10,7 +10,39 @@
   - Fall_down, jay_walk, suddenlyappear
 
 
-## installation
+## Features
+- Real-time detection of dangerous Child behavior using YOLOv8
+- Supports detection of:
+  - Jay walk
+  - Sudden appear
+  - Fall down
+- Displays on-screen warning messages
+- Plays waring sounds('alert.mp3')
+- Saves detection results as a vidio ('output/result.mp4')
+  
+
+## Project Structure
+opensc_project/
+    logics/ # Core detection logic (e.g., fall_down.py)
+    models/ # YOLO trained model files (e.g., fall_down.pt)
+    output/ # Output derectory for result videos
+    alert.mp3 # Warning sound file
+    main.py # Main entry point (Streanlit app)
+    requirements.txt # Python dependencies
+    README.md
+
+
+## Example output
+Below is an example of the system detecting a dangerous behavior in a child protection zone.
+![Detection]
+![Detection]
+When dangerous behavior is detected:
+- A red bounding box appears on the person
+- A warning message is displayed
+  
+
+
+## Installation
 #### 1. Clone the repository:
 ```
   git clone https://github.com/jehyelim/opensc_project.git
@@ -24,14 +56,6 @@ pip install -r requirements.txt
 ``` 
 streamlit run main.py
 ```
-## If something goes wrong
-
-
-## support
-
-## license
-
-## Requirements
 
 
 
