@@ -18,10 +18,10 @@
   cd opencd_project
 ```
 #### 2. Install required dependencies:
-`pip install -r requirements.txt
+` pip install -r requirements.txt
   
 #### 3. Run the main
-`python main.py
+` python main.py
 
 ## If something goes wrong
 
