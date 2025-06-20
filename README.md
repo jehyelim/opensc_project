@@ -11,7 +11,15 @@
 
 # 연구 개발 내용
 
-## install
+## installation
+### 1. Clone the repository:
+    ```git clone https://github.com/jehyelim/opensc_project.git
+    cd opencd_project
+    ```
+### 2. Install required dependencies:
+    `pip install -r requirements.txt
+### 3. Run the main
+    `python main.py
 
 ## If something goes wrong
 
