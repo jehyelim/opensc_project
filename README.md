@@ -50,6 +50,7 @@ Below is an example of the system detecting a dangerous behavior in a child prot
 When dangerous behavior is detected:
 - A red bounding box appears on the person
 - A warning message is displayed
+- A warning sound is played
 
 
   
