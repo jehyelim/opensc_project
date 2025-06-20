@@ -44,7 +44,7 @@ opensc_project/
 ## Example output
 Below is an example of the system detecting a dangerous behavior in a child protection zone.
 ![Detection](output/jay_walk.png)
-![Detection]
+![Detection](output/output.png)
 
 
 When dangerous behavior is detected:
