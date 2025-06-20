@@ -6,9 +6,12 @@
 
 ## 
 
-## usage dataset
-  어린이 보호구역 내 어린이 도로보행 위험 행동 영상 데이터(https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=169)
-  - Fall_down, jay_walk, suddenlyappear
+## Dataset Used
+- [AIHub: Children's Road Behavior Danger Video Data](https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=169)
+- Categories:
+  - jay_walk
+  - suddenlyappear
+  - fall_down
 
 
 
@@ -19,8 +22,8 @@
   - Sudden appear
   - Fall down
 - Displays on-screen warning messages
-- Plays waring sounds('alert.mp3')
-- Saves detection results as a vidio ('output/result.mp4')
+- Plays warning sounds('alert.mp3')
+- Saves detection results as a video ('output/result.mp4')
 
   
 
@@ -29,9 +32,9 @@
 opensc_project/
     logics/ # Core detection logic (e.g., fall_down.py)
     models/ # YOLO trained model files (e.g., fall_down.pt) 
-    output/ # Output derectory for result videos
+    output/ # Output directory for result videos
     alert.mp3 # Warning sound file
-    main.py # Main entry point (Streanlit app)
+    main.py # Main entry point (Streamlit app)
     requirements.txt # Python dependencies
     README.md
 ```
@@ -41,7 +44,8 @@ opensc_project/
 ## Example output
 Below is an example of the system detecting a dangerous behavior in a child protection zone.
 ![Detection](output/jay_walk.png)
-![Detection](output/fall_down.png)
+![Detection]
+
 
 When dangerous behavior is detected:
 - A red bounding box appears on the person
@@ -52,9 +56,9 @@ When dangerous behavior is detected:
 ## Troubleshooting
 If you encounter any issues:
 
-- **Model file not found**: Make sure the all '.pt' files are placed in the 'models/' directory.
-- **No vidio output**: Check if your webcam of video path is correctly set in 'main.py'.
-- **Dependency errors**: Run 'pip install -r requirments.txt' to install all required packages.
+- **Model file not found**: Make sure all `.pt` files are placed in the `models/` directory.
+- **No video output**: Check if your webcam or video path is correctly set in `main.py`.
+- **Dependency errors**: Run `pip install -r requirments.txt` to install all required packages.
   
 
 
@@ -62,7 +66,7 @@ If you encounter any issues:
 #### 1. Clone the repository:
 ```
 git clone https://github.com/jehyelim/opensc_project.git
-cd opencd_project
+cd opensc_project
 ```
 #### 2. Install required dependencies:
 ```
