@@ -41,20 +41,27 @@ Below is an example of the system detecting a dangerous behavior in a child prot
 When dangerous behavior is detected:
 - A red bounding box appears on the person
 - A warning message is displayed
-  
 
+  
+## Troubleshooting
+If you encounter any issues:
+
+- **Model file not found**: Make sure the all '~.pt' file is placed in the 'models/' directory.
+- **No vidio output**: Check if your webcam of video path is correctly set in 'main.py'.
+- **Dependency errors**: Run 'pip install -r requirments.txt' to install all required packages.
+  
 
 ## Installation
 #### 1. Clone the repository:
 ```
-  git clone https://github.com/jehyelim/opensc_project.git
-  cd opencd_project
+git clone https://github.com/jehyelim/opensc_project.git
+cd opencd_project
 ```
 #### 2. Install required dependencies:
 ```
 pip install -r requirements.txt
 ```  
-#### 3. Run the main:
+#### 3. Run the Streamlit app:
 ``` 
 streamlit run main.py
 ```
