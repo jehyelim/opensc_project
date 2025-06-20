@@ -9,7 +9,7 @@ import shutil
 from logics.jay_walk_test import detect_jaywalking
 from logics.fall_down import detect_fall
 from logics.suddenly_appear_test import detect_suddenly_appear
-from alert_email import send_alert
+
 import pygame
 import time
 
@@ -54,24 +54,9 @@ if uploaded_video is not None:
     if any(results.values()):
         st.error("🚨 위험 행동이 감지되었습니다!")
         play_alert_sound("alert.mp3")
-        send_alert()
-    else:
-        st.success("위험 행동이 감지되지 않았습니다.")
-
-    jay_alert=detect_jaywalking(video_path, jay_model_path)
-    fall_alert=detect_fall(video_path, fall_model_path)
-    sudden_alert=detect_suddenly_appear(video_path,sudden_model_path)
-    
-    if jay_alert or fall_alert or sudden_alert:
-        st.error("🚨 위험 행동이 감지되었습니다!")
-        play_alert_sound("alert.mp3")
-        send_alert()
-    else:
-        st.success("위험 행동이 감지되지 않았습니다.")
         
+    else:
+        st.success("위험 행동이 감지되지 않았습니다.")
 
-    output_video_path="output/result.mp4"
-    if os.path.exists(output_video_path):
-        with open(output_video_path, "rb") as f:
-            st.download_button("⬇️ 결과 영상 다운로드", f, file_name="result.mp4")
+    
 
