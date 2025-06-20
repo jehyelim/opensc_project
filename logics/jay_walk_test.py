@@ -4,7 +4,7 @@ import cv2
 
 
 import numpy as np
-#from collections import defaultdict
+
 #모델 불러오기 
 
 
@@ -18,6 +18,8 @@ def detect_jaywalking(video_path, model_path):
 
     model = YOLO(model_path)
     model.conf = 0.4
+
+    detected=False 
 
     CLASS_NAMES = ['cycle', 'face', 'license plate', 'person', 'traffic light', 'vehicle']
     PERSON_CLASS_ID = CLASS_NAMES.index('person')
@@ -71,7 +73,8 @@ def detect_jaywalking(video_path, model_path):
                 cy = (y1 + y2) // 2
                 if cv2.pointPolygonTest(road_polygon, (cx, cy), False) >= 0:
                     if not green_light:
-                        cv2.putText(frame, "WARNING!! Jay Walking!!!", (x1, y1 - 10),
+                        detected=True
+                        cv2.putText(frame, "WARNING!! ", (x1, y1 - 10),
                                     cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 0, 255), 3)
                         cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 0, 255), 3)
                 else:
@@ -84,4 +87,4 @@ def detect_jaywalking(video_path, model_path):
     out.release()
     cv2.destroyAllWindows()
 
-    return out_path
+    return detected
