@@ -22,7 +22,7 @@ pip install -r requirements.txt
 ```  
 #### 3. Run the main:
 ``` 
-python main.py
+streamlit run main.py
 ```
 ## If something goes wrong
 
