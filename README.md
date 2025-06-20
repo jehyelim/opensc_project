@@ -2,7 +2,7 @@
 
 ## Introduction
   It is a system that automatically detects and warns children's dangerous behavior that may occur on the road in a child protection zone to    reduce traffic accidents among children.
-  The main function is to detect a child's dangerous behavior (jay walk, suddenly appear, and fall down) in real time, float a warning          message notification with a warning sound.
+  The main function is to detect a child's dangerous behavior (jay walk, suddenly appear, and fall down) in real time, float a warning          message notification with a warning sound. Images of detecting each dangerous behavior are also stored to check which behavior is detected.
 
 ## 
 ## usage dataset
@@ -25,6 +25,7 @@ pip install -r requirements.txt
 streamlit run main.py
 ```
 ## If something goes wrong
+
 
 ## support
 
