@@ -23,7 +23,7 @@
   - Fall down
 - Displays on-screen warning messages
 - Plays warning sounds('alert.mp3')
-- Saves detection results as a video ('output/result.mp4')
+- Saves detection results as a video ('output/jay_result.mp4'), ('output/fall_result.mp4'), ('output/suddenly_result.mp4')
 
   
 
