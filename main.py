@@ -8,7 +8,7 @@ import concurrent.futures
 import shutil
 from logics.jay_walk_test import detect_jaywalking
 from logics.fall_down import detect_fall
-from logics.suddenly_appear_test import detect_suddenly_appear
+from logics.suddenly_appear import detect_suddenly_appear
 
 import pygame
 import time
@@ -33,7 +33,7 @@ if uploaded_video is not None:
 
     jay_model_path="models/jay_walk.pt"
     fall_model_path="models/fall_down.pt"
-    sudden_model_path="models.suddenly_appear.pt"
+    sudden_model_path="models/suddenly_appear.pt"
 
     st.info("분석 중입니다.")
 
