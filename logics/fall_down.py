@@ -17,7 +17,7 @@ def detect_fall(video_path, model_path):
     model = YOLO(model_path)
     model.conf = 0.4
 
-    output_path = "fall_result.mp4"
+    output_path = "output/fall_result.mp4"
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
     out = cv2.VideoWriter(output_path, fourcc, fps, (width, height))
 
