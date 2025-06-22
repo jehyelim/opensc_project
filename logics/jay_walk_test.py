@@ -42,7 +42,7 @@ def detect_jaywalking(video_path, model_path):
         green_ratio = cv2.countNonZero(green_mask) / (roi.shape[0] * roi.shape[1])
         return green_ratio > 0.3
 
-    out_path = "output/result.mp4"
+    out_path = "output/jay_walk_result.mp4"
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
     out = cv2.VideoWriter(out_path, fourcc, 30.0, (width, height))
 
