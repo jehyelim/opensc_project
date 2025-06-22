@@ -68,7 +68,7 @@ def detect_suddenlyappear(video_path, model_path, output_path="output/result.mp4
 
 if __name__ == "__main__":
     video_file = "input/2020_11_10_13_37_suddenlyappear_sun_A_4.mp4"
-    yolo_ckpt  = "dataset/exp_finetune/weights/best.pt"
+    yolo_ckpt  = "dataset/exp_finetune/weights/suddenly_appear.pt"
     output_mp4 = "output/suddenly_result.mp4"
 
     detect_suddenlyappear(video_file, yolo_ckpt, output_mp4)
